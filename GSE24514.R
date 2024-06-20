@@ -5,7 +5,7 @@ library(GEOquery)
 data_set <- getGEO("GSE24514", AnnotGPL = TRUE)
 data_set <- data_set[[1]]
 m_data <- exprs(data_set) #49 sample: first 34 sample tumor, last 15 sample normal
-log_data <- log2(m_data) #data mızı normal dağılıma daha çok yaklaştırmak için bu aşamayı gerçekleştirdik
+log_data <- log2(m_data) #for normal distribution
 hist(log_data)
 
 #create the transpose data, samples in rows
